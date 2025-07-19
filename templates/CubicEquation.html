@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+        <h1>Math Solver</h1>
+        <form action="/solve" method="post">
+            <label for="equation">Enter Equation:</label>
+            <input type="text" id="equation" name="equation">
+            <input type="submit" value="Solve">
+        </form>
+        
+        <!-- Display result -->
+        {% if result %}
+            <p>Result: {{ result }}</p>
+        {% endif %}
+    
+
+
+{% endblock %}
